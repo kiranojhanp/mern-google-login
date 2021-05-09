@@ -5,7 +5,6 @@
 
 
 GET {{host}}/api/expenses
-Content-Type: {{contentType}}
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3NTMyMTU0ZjYyNGEzNTY1NzZhNGYiLCJpYXQiOjE2MjA1NTEyMDQsImV4cCI6MTYyMzE0MzIwNH0.pbkwr3XEaEUlhQQYL9bROTfkpP5f23wmAQuD_faBpWE
 
 ###
@@ -43,6 +42,5 @@ DELETE {{host}}/api/expenses/6097ad7d8d4e2bacebf1cfa3
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3NTMyMTU0ZjYyNGEzNTY1NzZhNGYiLCJpYXQiOjE2MjA1NTEyMDQsImV4cCI6MTYyMzE0MzIwNH0.pbkwr3XEaEUlhQQYL9bROTfkpP5f23wmAQuD_faBpWE
 
 ###
-GET {{host}}/api/expenses/byDate
-Content-Type: {{contentType}}
+GET {{host}}/api/expenses/byDate?startDate=2021-05-09&endDate=2021-05-09
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3NTMyMTU0ZjYyNGEzNTY1NzZhNGYiLCJpYXQiOjE2MjA1NTEyMDQsImV4cCI6MTYyMzE0MzIwNH0.pbkwr3XEaEUlhQQYL9bROTfkpP5f23wmAQuD_faBpWE

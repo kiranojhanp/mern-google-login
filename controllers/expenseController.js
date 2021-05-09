@@ -1,5 +1,4 @@
 const asyncHandler = require("express-async-handler");
-const moment = require("moment");
 const Expense = require("../models/ExpenseModel");
 
 // @desc  Fetch all user expenses
@@ -87,26 +86,29 @@ const deleteExpenseById = asyncHandler(async (req, res) => {
 // @route  GET /api/expenses/byDate
 // @access Private
 const getExpensesByDate = asyncHandler(async (req, res) => {
-  res.send('Hello');
-  // const dateFrom = moment(req.query.dateFrom)
-  //   .utcOffset("+0700")
-  //   .format("YYYY-MM-DDTHH:mm:ss.SSSZ");
-  // const dateTo = moment(req.params.dateTo)
-  //   .utcOffset("+0700")
-  //   .format("YYYY-MM-DDTHH:mm:ss.SSSZ");
+  //expected date format: YYY-MMM-DDD
+  let { startDate, endDate } = req.query;
 
-  // const expenses = await Expense.find({
-  //   user: req.user._id,
-  //   updatedAt: {
-  //     $gt: dateFrom,
-  //     $lt: dateTo,
-  //   },
-  // });
-  // if (expenses) {
-  //   res.status(200).json(expenses);
-  // } else {
-  //   res.status(404).json({ error: "Expenses not found" });
-  // }
+  //1. check that date is not empty
+  if (startDate === "" || endDate === "") {
+    return res.status(400).json({
+      status: "failure",
+      message: "Please ensure you pick two dates",
+    });
+  }
+
+  const expenses = await Expense.find({
+    updatedAt: {
+      $gte: new Date(new Date(startDate).setHours(00, 00, 00)),
+      $lt: new Date(new Date(endDate).setHours(23, 59, 59)),
+    },
+  }).sort({ updatedAt: "asc" });
+
+  if (expenses) {
+    res.status(200).json(expenses);
+  } else {
+    res.status(404).json({ error: "No expenses found between this range" });
+  }
 });
 
 module.exports = {
