@@ -1,0 +1,48 @@
+@hostname = http://localhost
+@port = 5000
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+
+
+GET {{host}}/api/expenses
+Content-Type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3NTMyMTU0ZjYyNGEzNTY1NzZhNGYiLCJpYXQiOjE2MjA1NTEyMDQsImV4cCI6MTYyMzE0MzIwNH0.pbkwr3XEaEUlhQQYL9bROTfkpP5f23wmAQuD_faBpWE
+
+###
+POST {{host}}/api/expenses
+Content-Type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3NTMyMTU0ZjYyNGEzNTY1NzZhNGYiLCJpYXQiOjE2MjA1NTEyMDQsImV4cCI6MTYyMzE0MzIwNH0.pbkwr3XEaEUlhQQYL9bROTfkpP5f23wmAQuD_faBpWE
+
+{
+    "user": "6097532154f624a356576a4f",
+    "title": "This is the first post",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "amount": 2000,
+    "status": true
+}
+
+###
+GET {{host}}/api/expenses/6097ad838d4e2bacebf1cfa4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3NTMyMTU0ZjYyNGEzNTY1NzZhNGYiLCJpYXQiOjE2MjA1NTEyMDQsImV4cCI6MTYyMzE0MzIwNH0.pbkwr3XEaEUlhQQYL9bROTfkpP5f23wmAQuD_faBpWE
+
+###
+PUT {{host}}/api/expenses/6097ad7d8d4e2bacebf1cfa3
+Content-Type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3NTMyMTU0ZjYyNGEzNTY1NzZhNGYiLCJpYXQiOjE2MjA1NTEyMDQsImV4cCI6MTYyMzE0MzIwNH0.pbkwr3XEaEUlhQQYL9bROTfkpP5f23wmAQuD_faBpWE
+
+{
+    "user": "6097532154f624a356576a4f",
+    "title": "This is the first post updated again",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "amount": 2000,
+    "status": true
+}
+
+###
+DELETE {{host}}/api/expenses/6097ad7d8d4e2bacebf1cfa3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3NTMyMTU0ZjYyNGEzNTY1NzZhNGYiLCJpYXQiOjE2MjA1NTEyMDQsImV4cCI6MTYyMzE0MzIwNH0.pbkwr3XEaEUlhQQYL9bROTfkpP5f23wmAQuD_faBpWE
+
+###
+GET {{host}}/api/expenses/byDate
+Content-Type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3NTMyMTU0ZjYyNGEzNTY1NzZhNGYiLCJpYXQiOjE2MjA1NTEyMDQsImV4cCI6MTYyMzE0MzIwNH0.pbkwr3XEaEUlhQQYL9bROTfkpP5f23wmAQuD_faBpWE
