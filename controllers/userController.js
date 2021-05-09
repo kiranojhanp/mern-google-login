@@ -42,7 +42,7 @@ const googleLogin = asyncHandler(async (req, res) => {
         name: user.name,
         email: user.email,
         picture: user.picture,
-        token: generateToken(_id),
+        token: generateToken(user._id),
       });
     } else {
       res.status(400).json({ error: "Could not create!" });

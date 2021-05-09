@@ -19,6 +19,11 @@ const expenseSchema = mongoose.Schema(
       type: Number,
       required: true,
     },
+    expenseDate: {
+      type: Date,
+      default: Date.now,
+      required: true,
+    },
     status: {
       type: Boolean,
       required: true,
