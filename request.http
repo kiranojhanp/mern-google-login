@@ -42,5 +42,5 @@ DELETE {{host}}/api/expenses/6097d7fc4a0952b4e14386e9
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzNmZlM2M0OWIzZmI1NTc4NWUiLCJpYXQiOjE2MjA1NjMzNjEsImV4cCI6MTYyMzE1NTM2MX0.UoSBmxQqpdjLYsILlWPO9iv9E12tzUFMUglQZeCo0S8
 
 ###
-GET {{host}}/api/expenses/byDate?startDate=2021-05-04&endDate=2021-05-26
+GET {{host}}/api/expenses/byDate?startDate=2021-05-04&endDate=2021-05-10
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzNmZlM2M0OWIzZmI1NTc4NWUiLCJpYXQiOjE2MjA1NjMzNjEsImV4cCI6MTYyMzE1NTM2MX0.UoSBmxQqpdjLYsILlWPO9iv9E12tzUFMUglQZeCo0S8
