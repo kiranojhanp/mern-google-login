@@ -7,6 +7,7 @@ const connectDB = require("./config/db.js");
 // get routes
 const userRoutes = require("./routes/userRouter");
 const expenseRoutes = require("./routes/expenseRouter");
+const expenseCategoryRouter = require("./routes/expenseCategoryRouter");
 
 dotenv.config();
 connectDB();
@@ -20,6 +21,7 @@ app.options("*", cors());
 
 app.use("/api/auth", userRoutes);
 app.use("/api/expenses", expenseRoutes);
+app.use("/api/category", expenseCategoryRouter);
 
 app.get("/", (req, res) => {
   res.send("API is running....");

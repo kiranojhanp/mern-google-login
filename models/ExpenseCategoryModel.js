@@ -21,3 +21,6 @@ const expenseCategorySchema = mongoose.Schema({
     ref: "Expense",
   },
 });
+
+const Expense = mongoose.model("ExpenseCategory", expenseCategorySchema);
+module.exports = Expense;
