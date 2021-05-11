@@ -80,5 +80,5 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzN
 }
 
 ###
-GET {{host}}/api/category/6099ca689faa0f0c409f778d/expenses
+GET {{host}}/api/category/6099c3dac1d9150ab2389e0a/expenses
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzNmZlM2M0OWIzZmI1NTc4NWUiLCJpYXQiOjE2MjA1NjMzNjEsImV4cCI6MTYyMzE1NTM2MX0.UoSBmxQqpdjLYsILlWPO9iv9E12tzUFMUglQZeCo0S8
