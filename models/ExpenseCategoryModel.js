@@ -15,11 +15,12 @@ const expenseCategorySchema = mongoose.Schema({
     default: "#f66",
     required: true,
   },
-  expenses: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    ref: "Expense",
-  },
+  expenses: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Expense",
+    },
+  ],
 });
 
 const Expense = mongoose.model("ExpenseCategory", expenseCategorySchema);

@@ -24,6 +24,11 @@ const expenseSchema = mongoose.Schema(
       default: Date.now,
       required: true,
     },
+    category: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "ExpenseCategory",
+      required: true,
+    },
     status: {
       type: Boolean,
       required: true,

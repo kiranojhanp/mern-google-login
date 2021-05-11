@@ -17,12 +17,13 @@ const getExpenses = asyncHandler(async (req, res) => {
 // @route  POST /api/expenses
 // @access Private
 const createExpense = asyncHandler(async (req, res) => {
-  const { title, description, amount, expenseDate, status } = req.body;
+  const { title, description, amount, category, expenseDate, status } = req.body;
   const expense = new Expense({
     user: req.user._id,
     title: title,
     description: description,
     amount: amount,
+    category: category,
     expenseDate: expenseDate,
     status: status,
   });
@@ -48,7 +49,7 @@ const getExpenseById = asyncHandler(async (req, res) => {
 // @route  PUT /api/expense/:id
 // @access Private
 const updateExpense = asyncHandler(async (req, res) => {
-  const { title, description, amount, expenseDate, status } = req.body;
+  const { title, description, amount, category, expenseDate, status } = req.body;
 
   const expense = await Expense.findByIdAndUpdate(
     req.params.id,
@@ -57,6 +58,7 @@ const updateExpense = asyncHandler(async (req, res) => {
       title: title,
       description: description,
       amount: amount,
+      category: category,
       expenseDate: expenseDate,
       status: status,
     },

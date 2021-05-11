@@ -16,6 +16,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzN
     "user": "6097532154f624a356576a4f",
     "title": "This is the first post",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "category": "6099c3dac1d9150ab2389e0a",
     "amount": 2000,
     "status": true
 }
@@ -33,6 +34,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzN
     "user": "6097532154f624a356576a4f",
     "title": "This is the first post updated again",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "category": "6099c3dac1d9150ab2389e0a",
     "amount": 2000,
     "status": true
 }
@@ -51,4 +53,32 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzN
 
 ###
 POST {{host}}/api/category
+Content-Type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzNmZlM2M0OWIzZmI1NTc4NWUiLCJpYXQiOjE2MjA1NjMzNjEsImV4cCI6MTYyMzE1NTM2MX0.UoSBmxQqpdjLYsILlWPO9iv9E12tzUFMUglQZeCo0S8
+
+{
+    "name": "Krishna Ojha", 
+    "icon": "plus", 
+    "color": "red", 
+    "expenses": ["6099c3dac1d9150ab2389e0a", "6099c3e3c1d9150ab2389e0b"]
+}
+
+###
+GET {{host}}/api/category/6099c3dac1d9150ab2389e0a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzNmZlM2M0OWIzZmI1NTc4NWUiLCJpYXQiOjE2MjA1NjMzNjEsImV4cCI6MTYyMzE1NTM2MX0.UoSBmxQqpdjLYsILlWPO9iv9E12tzUFMUglQZeCo0S8
+
+###
+PUT {{host}}/api/category/6099c3dac1d9150ab2389e0a
+Content-Type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzNmZlM2M0OWIzZmI1NTc4NWUiLCJpYXQiOjE2MjA1NjMzNjEsImV4cCI6MTYyMzE1NTM2MX0.UoSBmxQqpdjLYsILlWPO9iv9E12tzUFMUglQZeCo0S8
+
+{
+    "name": "Krishna Ojha updated", 
+    "icon": "plus", 
+    "color": "red", 
+    "expenses": ["6099c53fdeb4f50ae3b66938","6099c540deb4f50ae3b66939"]
+}
+
+###
+GET {{host}}/api/category/6099ca689faa0f0c409f778d/expenses
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzNmZlM2M0OWIzZmI1NTc4NWUiLCJpYXQiOjE2MjA1NjMzNjEsImV4cCI6MTYyMzE1NTM2MX0.UoSBmxQqpdjLYsILlWPO9iv9E12tzUFMUglQZeCo0S8
