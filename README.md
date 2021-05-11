@@ -2,6 +2,9 @@
 
 > Daily expense tracker application backend using nodeJS and mongoDB.
 
+## Auth Flow
+![Auth Flow](https://user-images.githubusercontent.com/29760858/65579674-a4d22c00-df91-11e9-8303-dc97e5bb0dbf.png)
+
 ## Features
 
 - Add / Edit and Delete expense any day of month
