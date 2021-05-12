@@ -4,13 +4,15 @@
 @contentType = application/json
 
 
+###
+
 GET {{host}}/api/expenses
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzNmZlM2M0OWIzZmI1NTc4NWUiLCJpYXQiOjE2MjA1NjMzNjEsImV4cCI6MTYyMzE1NTM2MX0.UoSBmxQqpdjLYsILlWPO9iv9E12tzUFMUglQZeCo0S8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZTA2MTVmYzUyODAwMjIxZDAyOTgiLCJpYXQiOjE2MjA3ODE3MzAsImV4cCI6MTYyMzM3MzczMH0.EX3Stt3Wmye1yUngR_3jDY9hpDYbJq_xC2haF89sDTI
 
 ###
 POST {{host}}/api/expenses
 Content-Type: {{contentType}}
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzNmZlM2M0OWIzZmI1NTc4NWUiLCJpYXQiOjE2MjA1NjMzNjEsImV4cCI6MTYyMzE1NTM2MX0.UoSBmxQqpdjLYsILlWPO9iv9E12tzUFMUglQZeCo0S8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZTA2MTVmYzUyODAwMjIxZDAyOTgiLCJpYXQiOjE2MjA3ODE3MzAsImV4cCI6MTYyMzM3MzczMH0.EX3Stt3Wmye1yUngR_3jDY9hpDYbJq_xC2haF89sDTI
 
 {
     "user": "6097532154f624a356576a4f",
@@ -22,7 +24,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzN
 
 ###
 GET {{host}}/api/expenses/6097d8ed4a0952b4e14386f3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzNmZlM2M0OWIzZmI1NTc4NWUiLCJpYXQiOjE2MjA1NjMzNjEsImV4cCI6MTYyMzE1NTM2MX0.UoSBmxQqpdjLYsILlWPO9iv9E12tzUFMUglQZeCo0S8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZTA2MTVmYzUyODAwMjIxZDAyOTgiLCJpYXQiOjE2MjA3ODE3MzAsImV4cCI6MTYyMzM3MzczMH0.EX3Stt3Wmye1yUngR_3jDY9hpDYbJq_xC2haF89sDTI
 
 ###
 PUT {{host}}/api/expenses/6097d7fc4a0952b4e14386e9
