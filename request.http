@@ -1,11 +1,12 @@
 @hostname = http://localhost
+@remotehost = https://still-eyrie-92675.herokuapp.com
 @port = 5000
 @host = {{hostname}}:{{port}}
 @contentType = application/json
 
 
-GET {{host}}/api/expenses
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk3ZDUzNmZlM2M0OWIzZmI1NTc4NWUiLCJpYXQiOjE2MjA1NjMzNjEsImV4cCI6MTYyMzE1NTM2MX0.UoSBmxQqpdjLYsILlWPO9iv9E12tzUFMUglQZeCo0S8
+GET {{remotehost}}/api/expenses
+
 
 ###
 POST {{host}}/api/expenses
