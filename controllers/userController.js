@@ -127,10 +127,10 @@ const resetPassword = asyncHandler(async (req, res) => {
   });
 
   const mailOptions = {
-    from: "Timro Buda😇 <kiranojha1226@gmail.com>",
+    from: "Sir Kiran😇 <kiranojha1226@gmail.com>",
     to: emailTo,
-    subject: "Eh sexy timi kati ramri",
-    text: "I love you budi",
+    subject: "I am awesome",
+    text: "You know it",
   };
 
   const result = await transport.sendMail(mailOptions);
